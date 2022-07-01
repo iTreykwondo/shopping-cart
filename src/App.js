@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div>
-      <nav>
-        <Link to="/shop">Shop</Link>
-        <Link to="/cart">Cart</Link>
-      </nav>
-      <h1>Home Page</h1>
+      <Navbar />
+      <h1>Great Deals Ahead</h1>
+      <Link to="/shop">Go Shopping!</Link>
     </div>
   );
 }
