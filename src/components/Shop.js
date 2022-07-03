@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import Navbar from "./Navbar";
+import Product from "./Product";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -22,7 +23,7 @@ const Shop = () => {
   return (
     <div>
       <Navbar />
-      <h1>Shop Page</h1>
+      <Product products={products} />
     </div>
   );
 };
