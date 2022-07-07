@@ -7,12 +7,14 @@ const Product = (props) => {
         return (
           <div className="product-card" key={index}>
             <img className="product-img" src={item.image} alt={item.title} />
-            <div className="container">
+            <div
+              className="container"
+              onClick={(e) => props.addToCart(e, item)}
+            >
               <h4>{item.title}</h4>
               <p> Rating: {item.rating.rate} stars</p>
               <div className="add-to-cart">
                 <p>${item.price}</p>
-                <button>Add to cart</button>
               </div>
             </div>
           </div>
