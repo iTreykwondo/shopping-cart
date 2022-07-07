@@ -12,10 +12,12 @@ const Cart = (props) => {
       })}
       <div className="order-container">
         <div className="total">
-          <h3>Order Total: {props.total}</h3>
+          <h3>Order Total: ${Math.round(props.total * 100) / 100}</h3>
         </div>
         <div className="btn-container">
-          <button className="clear-btn">Clear cart</button>
+          <button className="clear-btn" onClick={props.clearCart}>
+            Clear cart
+          </button>
           <button className="checkout-btn" onClick={props.checkout}>
             Checkout
           </button>
