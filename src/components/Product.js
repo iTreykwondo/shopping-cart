@@ -5,12 +5,13 @@ const Product = (props) => {
     <div className="product-list">
       {props.products.map((item, index) => {
         return (
-          <div className="product-card" key={index}>
+          <div
+            className="product-card"
+            key={index}
+            onClick={(e) => props.addToCart(e, item)}
+          >
             <img className="product-img" src={item.image} alt={item.title} />
-            <div
-              className="container"
-              onClick={(e) => props.addToCart(e, item)}
-            >
+            <div className="container">
               <h4>{item.title}</h4>
               <p> Rating: {item.rating.rate} stars</p>
               <div className="add-to-cart">
