@@ -35,6 +35,10 @@ function App() {
     setCart([]);
   };
 
+  const clearCart = () => {
+    setCart([]);
+  };
+
   useEffect(() => {
     loadProducts();
     console.log(products);
@@ -57,7 +61,14 @@ function App() {
         />
         <Route
           path="cart"
-          element={<Cart cart={cart} total={total} checkout={checkout} />}
+          element={
+            <Cart
+              cart={cart}
+              total={total}
+              checkout={checkout}
+              clearCart={clearCart}
+            />
+          }
         />
       </Routes>
     </div>
